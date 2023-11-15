@@ -1,6 +1,6 @@
 import { create, Whatsapp } from 'venom-bot';
 import { logger } from "../../logger";
-import { VenonReadingMessages } from "./venon-reading-messages";
+import { VenomReadingMessages } from "./venom-reading-messages";
 import { WhatsappInstanceConfig } from "../../../domain/entities/whatsapp-instance-config";
 import { CreateConfig } from "venom-bot/dist/config/create-config";
 import { whatsappInstance } from "../../../application/abstractions/whatsapp.provider";
@@ -14,7 +14,7 @@ export class VenomInstance implements whatsappInstance{
 
   constructor(
     config: WhatsappInstanceConfig,
-    private messageHandler: VenonReadingMessages
+    private messageHandler: VenomReadingMessages
   ) {
     this.key = config.key;
     this.init(config)
